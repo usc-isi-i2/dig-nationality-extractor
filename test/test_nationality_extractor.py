@@ -10,7 +10,7 @@ from digExtractor.extractor import Extractor
 from digExtractor.extractor_processor import ExtractorProcessor
 from digNationalityExtractor.nationality_extractor import NationalityExtractor
 
-class TestServiceExtractorMethods(unittest.TestCase):
+class TestNationalityExtractorMethods(unittest.TestCase):
 
     def setUp(self):
         pass
@@ -18,8 +18,8 @@ class TestServiceExtractorMethods(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_age_extractor(self):
-        doc = {'content': "American Antiguans Panamanian Hello World", 'b': 'world'}
+    def test_business_type_extractor(self):
+        doc = {'content': ['American', 'Antiguans', 'Panamanian', 'Hello', 'World'], 'b': 'world'}
 
         extractor = NationalityExtractor().set_metadata({'extractor': 'nationality'})
         extractor_processor = ExtractorProcessor().set_input_fields(['content']).set_output_field('extracted').set_extractor(extractor)

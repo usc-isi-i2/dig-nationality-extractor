@@ -1,4 +1,4 @@
-[
+names = [
     "Afghan",
     "Albanian",
     "Algerian",
